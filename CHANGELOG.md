@@ -1,5 +1,9 @@
 # Change history / Historia zmian
 
+## 1.4.2
+- The plugin's own icon in the ATAK tools menu and the plugin list. No functional changes.
+- Własna ikona wtyczki w menu narzędzi ATAK i na liście wtyczek. Bez zmian w działaniu.
+
 ## 1.4.1
 - Build changes for distribution through Google Play (increasing build number, target Android level 36). No functional changes.
 - Zmiany w budowaniu pod dystrybucję przez Google Play (rosnący numer kompilacji, docelowy poziom Androida 36). Bez zmian w działaniu.
