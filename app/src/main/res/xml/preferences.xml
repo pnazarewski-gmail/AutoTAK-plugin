@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.atakmap.android.gui.PanListPreference
+        android:defaultValue="pan"
+        android:entries="@array/pref_select_entries"
+        android:entryValues="@array/pref_select_values"
+        android:key="autotak.select_action"
+        android:summary="@string/pref_select_summary"
+        android:title="@string/pref_select_title" />
+
+    <!-- Nagłówek bez elementów w środku: ATAK przenosi na swoją stronę tylko ustawienia z najwyższego
+         poziomu, a zagnieżdżone próbowałby zapisać w danych wtyczki, do których nie ma dostępu. -->
+    <PreferenceCategory android:title="@string/pref_category_send" />
+
+    <com.atakmap.android.gui.PanListPreference
+        android:defaultValue="all"
+        android:entries="@array/pref_objects_entries"
+        android:entryValues="@array/pref_objects_values"
+        android:key="autotak.objects"
+        android:summary="@string/pref_objects_summary"
+        android:title="@string/pref_objects_title" />
+
+    <com.atakmap.android.gui.PanCheckBoxPreference
+        android:defaultValue="true"
+        android:key="autotak.send_self"
+        android:summary="@string/pref_self_summary"
+        android:title="@string/pref_self_title" />
+
+    <com.atakmap.android.gui.PanCheckBoxPreference
+        android:defaultValue="true"
+        android:key="autotak.send_icons"
+        android:summary="@string/pref_icons_summary"
+        android:title="@string/pref_icons_title" />
+
+    <com.atakmap.android.gui.PanCheckBoxPreference
+        android:defaultValue="true"
+        android:key="autotak.send_maps"
+        android:summary="@string/pref_maps_summary"
+        android:title="@string/pref_maps_title" />
+
+    <com.atakmap.android.gui.PanCheckBoxPreference
+        android:defaultValue="true"
+        android:key="autotak.send_active_map"
+        android:summary="@string/pref_active_map_summary"
+        android:title="@string/pref_active_map_title" />
+
+</PreferenceScreen>

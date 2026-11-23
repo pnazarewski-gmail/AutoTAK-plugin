@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_desc">Przekazuje obraz sytuacji z ATAK do aplikacji AutoTAK (Android Auto) na tym telefonie.</string>
+    <string name="pref_tool_summary">Co trafia do aplikacji AutoTAK i jak ATAK reaguje na wybór obiektu w AutoTAK</string>
+
+    <string name="pref_select_title">Po wybraniu obiektu w AutoTAK</string>
+    <string name="pref_select_summary">Co robi ATAK, gdy wybierzesz obiekt na mapie AutoTAK albo na ekranie samochodu.</string>
+    <string-array name="pref_select_entries">
+        <item>Nic</item>
+        <item>Przesuń mapę na obiekt</item>
+        <item>Przesuń mapę i zaznacz obiekt (menu i okno informacji)</item>
+    </string-array>
+
+    <string name="pref_category_send">Przekazuj do AutoTAK</string>
+    <string name="pref_objects_title">Obiekty mapy</string>
+    <string name="pref_objects_summary">Wszystkie obiekty albo tylko kontakty (bez znaczników, kształtów i znaków taktycznych).</string>
+    <string-array name="pref_objects_entries">
+        <item>Wszystkie</item>
+        <item>Tylko kontakty</item>
+    </string-array>
+    <string name="pref_self_title">Własna pozycja i dane własne</string>
+    <string name="pref_self_summary">Pozycja, prędkość, kierunek, znak wywoławczy, zespół i rola. Bez tego AutoTAK nie pokaże własnej pozycji.</string>
+    <string name="pref_icons_title">Zestawy ikon</string>
+    <string name="pref_icons_summary">Zestawy ikon użytkownika z ATAK. Zestawy już skopiowane zostają w AutoTAK.</string>
+    <string name="pref_maps_title">Definicje map online</string>
+    <string name="pref_maps_summary">Źródła map online znane ATAK. Mapy już dodane zostają w AutoTAK.</string>
+    <string name="pref_active_map_title">Nazwa wybranej mapy</string>
+    <string name="pref_active_map_summary">Potrzebna opcji AutoTAK „Mapa jak w ATAK”.</string>
+
+    <string name="panel_title">Łącze z AutoTAK</string>
+    <string name="panel_state_connected">Połączono z AutoTAK</string>
+    <string name="panel_state_waiting">Czekam na aplikację AutoTAK (czy jest zainstalowana i w trybie powiązanym?)</string>
+    <string name="panel_state_refused">AutoTAK nie jest w trybie powiązanym albo nie ufa temu ATAK</string>
+    <string name="panel_state_lost">Połączenie przerwane, łączę ponownie</string>
+    <string name="panel_details_connected">Aplikacja: %1$s\nProtokół: %2$d\nPrzekazanych obiektów: %3$d</string>
+    <string name="panel_host_release">AutoTAK %1$s</string>
+    <string name="panel_host_debug">AutoTAK %1$s (wersja testowa)</string>
+    <string name="panel_details_plugin">Wersja wtyczki: %1$s</string>
+    <string name="panel_settings_header">Bieżące ustawienia</string>
+    <string name="panel_settings_text">Po wybraniu obiektu: %1$s\nObiekty mapy: %2$s\nPrzekazywane: %3$s</string>
+    <string name="panel_passed_self">dane własne</string>
+    <string name="panel_passed_icons">zestawy ikon</string>
+    <string name="panel_passed_maps">definicje map</string>
+    <string name="panel_passed_active_map">nazwa wybranej mapy</string>
+    <string name="panel_passed_none">nic poza obiektami mapy</string>
+    <string name="panel_open_settings">Ustawienia</string>
+    <string name="panel_force_sync">Wymuś synchronizację</string>
+    <string name="panel_force_sync_summary">Wysyła do AutoTAK od nowa cały obraz, ustawienia i stan.</string>
+    <string name="panel_force_sync_done">Zlecono synchronizację</string>
+
+    <string name="panel_host_old">2.1.0 lub wcześniejsza</string>
+    <string name="panel_history">Historia zmian</string>
+    <string name="panel_events_header">Dziennik zdarzeń</string>
+    <string name="panel_events_summary">Ostatnie zdarzenia techniczne (po angielsku, bez treści obiektów). Cały dziennik można udostępnić jako plik.</string>
+    <string name="panel_events_empty">(brak zdarzeń)</string>
+    <string name="panel_events_share">Udostępnij dziennik</string>
+    <string name="panel_events_clear">Wyczyść dziennik</string>
+    <string name="panel_events_subject">Wtyczka AutoTAK — dziennik zdarzeń</string>
+    <string name="panel_events_share_failed">Nie udało się przygotować pliku dziennika.</string>
+    <string name="plugin_history">1.4.1\n• Zmiany w budowaniu pod dystrybucję przez Google Play (rosnący numer kompilacji, nowszy docelowy poziom Androida). Bez zmian w działaniu.\n\n1.4\n• Obiekt wybrany w ATAK jest zgłaszany do AutoTAK, który może przenieść na niego swoją mapę (ustawienie w aplikacji AutoTAK, domyślnie wyłączone).\n\n1.3\n• Panel pokazuje wersję połączonej aplikacji AutoTAK (dla starszych: 2.1.0 lub wcześniejsza).\n• Dziennik zdarzeń z udostępnianiem jako plik.\n• Historia zmian w panelu.\n\n1.2\n• Panel wtyczki ze stanem łącza, skrótem ustawień oraz przyciskami Ustawienia i Wymuś synchronizację.\n• Zaznaczanie obiektu jak w ATAK: menu kołowe i okno informacji.\n\n1.1\n• Strona ustawień: reakcja na wybór obiektu w AutoTAK, wszystkie obiekty albo tylko kontakty, przełączniki danych własnych, zestawów ikon, definicji map i nazwy wybranej mapy.\n• Teksty po angielsku i po polsku.\n\n1.0\n• Pierwsza wersja: przekazuje do aplikacji AutoTAK obiekty mapy i ich zmiany, własną pozycję i dane własne, stan połączenia z serwerem, zestawy ikon i definicje map online.</string>
+</resources>

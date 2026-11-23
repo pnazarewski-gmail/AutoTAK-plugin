@@ -1,0 +1,25 @@
+# Local configuration
+local.properties
+
+# Build state
+.gradle/
+.takdev/
+.kotlin/
+build/
+app/build/
+captures/
+*.apk
+*.aab
+*.zip
+
+# Signing material
+*.jks
+*.keystore
+*.p12
+
+# IDE
+.idea/
+*.iml
+
+# Logs
+*.log

@@ -1,0 +1,11 @@
+<resources>
+    <string-array name="pref_select_values" translatable="false">
+        <item>none</item>
+        <item>pan</item>
+        <item>menu</item>
+    </string-array>
+    <string-array name="pref_objects_values" translatable="false">
+        <item>all</item>
+        <item>contacts</item>
+    </string-array>
+</resources>

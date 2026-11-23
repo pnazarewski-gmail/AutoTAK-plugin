@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name" translatable="false">AutoTAK</string>
+    <string name="app_desc">Passes the ATAK picture to the AutoTAK app (Android Auto) on this phone.</string>
+    <string name="pref_tool_summary">What is passed to the AutoTAK app and how ATAK reacts to a selection made there</string>
+
+    <string name="pref_select_title">When an item is selected in AutoTAK</string>
+    <string name="pref_select_summary">What ATAK does when you pick an item on the AutoTAK map or car screen.</string>
+    <string-array name="pref_select_entries">
+        <item>Nothing</item>
+        <item>Move the map to the item</item>
+        <item>Move the map and select the item (menu and info window)</item>
+    </string-array>
+
+    <string name="pref_category_send">Passed to AutoTAK</string>
+    <string name="pref_objects_title">Map items</string>
+    <string name="pref_objects_summary">All items, or contacts only (no markers, shapes or tactical graphics).</string>
+    <string-array name="pref_objects_entries">
+        <item>All</item>
+        <item>Contacts only</item>
+    </string-array>
+    <string name="pref_self_title">Own position and identity</string>
+    <string name="pref_self_summary">Position, speed, heading, callsign, team and role. Without it AutoTAK shows no own position.</string>
+    <string name="pref_icons_title">Icon sets</string>
+    <string name="pref_icons_summary">User icon sets from ATAK. Sets already copied stay in AutoTAK.</string>
+    <string name="pref_maps_title">Online map definitions</string>
+    <string name="pref_maps_summary">Online map sources known to ATAK. Maps already added stay in AutoTAK.</string>
+    <string name="pref_active_map_title">Selected map name</string>
+    <string name="pref_active_map_summary">Needed by the AutoTAK option that follows the map chosen in ATAK.</string>
+
+    <string name="panel_title">AutoTAK link</string>
+    <string name="panel_state_connected">Connected to AutoTAK</string>
+    <string name="panel_state_waiting">Waiting for the AutoTAK app (is it installed and in linked mode?)</string>
+    <string name="panel_state_refused">AutoTAK is not in linked mode or does not trust this ATAK</string>
+    <string name="panel_state_lost">Connection lost, reconnecting</string>
+    <string name="panel_details_connected">App: %1$s\nProtocol: %2$d\nItems passed: %3$d</string>
+    <string name="panel_host_release">AutoTAK %1$s</string>
+    <string name="panel_host_debug">AutoTAK %1$s (test build)</string>
+    <string name="panel_details_plugin">Plugin version: %1$s</string>
+    <string name="panel_settings_header">Current settings</string>
+    <string name="panel_settings_text">On selection: %1$s\nMap items: %2$s\nPassed: %3$s</string>
+    <string name="panel_passed_self">own data</string>
+    <string name="panel_passed_icons">icon sets</string>
+    <string name="panel_passed_maps">map definitions</string>
+    <string name="panel_passed_active_map">selected map name</string>
+    <string name="panel_passed_none">nothing besides map items</string>
+    <string name="panel_open_settings">Settings</string>
+    <string name="panel_force_sync">Force synchronization</string>
+    <string name="panel_force_sync_summary">Sends the whole picture, settings and state to AutoTAK again.</string>
+    <string name="panel_force_sync_done">Synchronization requested</string>
+
+    <string name="panel_host_old">2.1.0 or earlier</string>
+    <string name="panel_history">Change history</string>
+    <string name="panel_events_header">Event log</string>
+    <string name="panel_events_summary">Latest technical events (in English, no item contents). The whole log can be shared as a file.</string>
+    <string name="panel_events_empty">(no events yet)</string>
+    <string name="panel_events_share">Share the log</string>
+    <string name="panel_events_clear">Clear the log</string>
+    <string name="panel_events_subject">AutoTAK plugin — event log</string>
+    <string name="panel_events_share_failed">Could not prepare the log file.</string>
+    <string name="plugin_history">1.4.1\n• Build changes for distribution through Google Play (increasing build number, newer target Android level). No functional changes.\n\n1.4\n• An item selected in ATAK is reported to AutoTAK, which can move its map to it (a setting in the AutoTAK app, off by default).\n\n1.3\n• The panel shows the version of the connected AutoTAK app (for older apps: 2.1.0 or earlier).\n• Event log with sharing as a file.\n• Change history in the panel.\n\n1.2\n• Plugin panel with the link state, a settings summary and the buttons Settings and Force synchronization.\n• Selecting an item as in ATAK: radial menu and information window.\n\n1.1\n• Settings page: reaction to a selection made in AutoTAK, all items or contacts only, switches for own data, icon sets, map definitions and the selected map name.\n• English and Polish texts.\n\n1.0\n• First version: passes map items and their changes, own position and identity, the state of the server connection, icon sets and online map definitions to the AutoTAK app.</string>
+</resources>
