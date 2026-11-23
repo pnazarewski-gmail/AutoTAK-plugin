@@ -95,7 +95,7 @@ Użytkownicy mogą mieć starszą aplikację i nowszą wtyczkę albo odwrotnie, 
 | 1.1 | 1 | 2.0.0, 2.0.1 |
 | 1.2 | 1 | 2.0.0, 2.0.1, 2.1.0, 2.2.0 |
 | 1.3 | 2 (z aplikacją 2.0.0–2.1.0 rozmawia w wersji 1) | 2.0.0, 2.0.1, 2.1.0, 2.2.0, 2.3.0 |
-| 1.4, 1.4.1, 1.4.2 | 3 (ze starszą aplikacją w jej wersji) | 2.0.0–2.3.2 |
+| 1.4, 1.4.1, 1.4.2, 1.4.3 | 3 (ze starszą aplikacją w jej wersji) | 2.0.0–2.3.3 |
 
 Protokół 3 (aplikacja 2.3.0, wtyczka 1.4) dodaje wywołanie `selected(uid)`: wtyczka zgłasza obiekt
 wybrany w ATAK (rozgłoszenie `SHOW_DETAILS`) i zdjęcie wyboru (`HIDE_DETAILS`, z opóźnieniem 0,4 s,

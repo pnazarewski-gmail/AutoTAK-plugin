@@ -1,5 +1,9 @@
 # Change history / Historia zmian
 
+## 1.4.3
+- Own speed is passed to AutoTAK (ATAK keeps it outside the marker track), so the AutoTAK map can turn with the direction of travel. The event log notes whether ATAK supplies speed and course.
+- Własna prędkość jest przekazywana do AutoTAK (ATAK trzyma ją poza śladem znacznika), dzięki czemu mapa AutoTAK może obracać się zgodnie z kierunkiem jazdy. Dziennik zdarzeń odnotowuje, czy ATAK podaje prędkość i kierunek.
+
 ## 1.4.2
 - The plugin's own icon in the ATAK tools menu and the plugin list. No functional changes.
 - Własna ikona wtyczki w menu narzędzi ATAK i na liście wtyczek. Bez zmian w działaniu.

@@ -179,6 +179,8 @@ public class CompanionLink implements ServiceConnection,
     private final Set<String> dirty = new HashSet<>();
     private boolean flushScheduled;
     private String lastState = "";
+    /** Czy ATAK podaje prędkość i kierunek — do dziennika, zapisywane przy zmianie (bez pozycji). */
+    private String lastMotion = "";
 
     private final Map<String, Integer> eventCounts = new HashMap<>();
 
@@ -784,15 +786,30 @@ public class CompanionLink implements ServiceConnection,
         }
         Marker marker = mapView.getSelfMarker();
         GeoPoint point = marker == null ? null : marker.getPoint();
+        String motion;
         if (sendSelf && point != null && point.isValid() && !(point.getLatitude() == 0 && point.getLongitude() == 0)) {
             self.put("lat", point.getLatitude());
             self.put("lon", point.getLongitude());
             if (!Double.isNaN(point.getAltitude()))
                 self.put("hae", point.getAltitude());
-            if (!Double.isNaN(marker.getTrackSpeed()))
-                self.put("speed", marker.getTrackSpeed());
-            if (!Double.isNaN(marker.getTrackHeading()))
-                self.put("course", marker.getTrackHeading());
+            // ATAK zapisuje w śladzie własnego znacznika kierunek, ale prędkość zawsze 0;
+            // prawdziwa prędkość z odbiornika jest w polu „Speed”.
+            double speed = marker.getMetaDouble("Speed", Double.NaN);
+            if (Double.isNaN(speed))
+                speed = marker.getTrackSpeed();
+            double course = marker.getTrackHeading();
+            if (!Double.isNaN(speed))
+                self.put("speed", speed);
+            if (!Double.isNaN(course))
+                self.put("course", course);
+            motion = (Double.isNaN(speed) ? "speed none" : speed > 0 ? "speed yes" : "speed zero")
+                    + ", course " + (Double.isNaN(course) ? "none" : "yes");
+        } else {
+            motion = sendSelf ? "no position" : "not passed";
+        }
+        if (!motion.equals(lastMotion)) {
+            lastMotion = motion;
+            PluginLog.add("Own data from ATAK: " + motion);
         }
         // Tylko kompilacja testowa: zmyślona własna pozycja, która nie trafia do ATAK ani na serwer.
         double[] fake = testSelf;
@@ -800,8 +817,13 @@ public class CompanionLink implements ServiceConnection,
             self.put("lat", fake[0]);
             self.put("lon", fake[1]);
             self.put("hae", 120);
-            self.put("speed", fake[2]);
-            self.put("course", fake[3]);
+            // „nan” w danych testowych: pozycja bez prędkości albo bez kierunku.
+            self.remove("speed");
+            self.remove("course");
+            if (!Double.isNaN(fake[2]))
+                self.put("speed", fake[2]);
+            if (!Double.isNaN(fake[3]))
+                self.put("course", fake[3]);
             if (testCallsign != null)
                 self.put("callsign", testCallsign);
         }
