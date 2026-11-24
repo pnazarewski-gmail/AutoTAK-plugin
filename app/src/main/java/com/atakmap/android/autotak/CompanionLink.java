@@ -87,7 +87,7 @@ public class CompanionLink implements ServiceConnection,
     private static final int BATCH_CHARS = 100_000;
     private static final long RETRY_MS = 15_000;
     private static final long SWEEP_MS = 15_000;
-    private static final long STATE_MS = 1_000;
+    private static final long STATE_MS = 250;
     private static final long FLUSH_MS = 200;
     private static final long MAX_MAP_XML = 64 * 1024;
 

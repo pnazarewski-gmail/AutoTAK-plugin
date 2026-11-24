@@ -1,5 +1,9 @@
 # Change history / Historia zmian
 
+## 1.4.4
+- Own position and course are passed to AutoTAK four times a second instead of once, so the AutoTAK map follows turns sooner.
+- Własna pozycja i kierunek są przekazywane do AutoTAK cztery razy na sekundę zamiast raz, dzięki czemu mapa AutoTAK szybciej nadąża za zakrętami.
+
 ## 1.4.3
 - Own speed is passed to AutoTAK (ATAK keeps it outside the marker track), so the AutoTAK map can turn with the direction of travel. The event log notes whether ATAK supplies speed and course.
 - Własna prędkość jest przekazywana do AutoTAK (ATAK trzyma ją poza śladem znacznika), dzięki czemu mapa AutoTAK może obracać się zgodnie z kierunkiem jazdy. Dziennik zdarzeń odnotowuje, czy ATAK podaje prędkość i kierunek.
