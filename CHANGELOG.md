@@ -1,5 +1,9 @@
 # Change history / Historia zmian
 
+## 1.5.2
+- Checking for a new version when ATAK starts is off by default; the check on demand is unchanged.
+- Sprawdzanie nowej wersji przy uruchomieniu ATAK jest domyślnie wyłączone; sprawdzanie na żądanie bez zmian.
+
 ## 1.5.1
 - Test release to check the update path through Google Play. No functional changes.
 - Wydanie testowe do sprawdzenia ścieżki aktualizacji przez Google Play. Bez zmian w działaniu.

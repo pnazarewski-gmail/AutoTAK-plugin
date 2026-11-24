@@ -24,8 +24,9 @@ public class AutoTakMapComponent extends DropDownMapComponent {
         super.onCreate(context, intent, view);
         link = new CompanionLink(view);
         link.start();
-        // Wtyczka ze sklepu Google Play: przy starcie sprawdza, czy jest nowsza wersja (da się wyłączyć).
-        if (UpdateCheck.fromStore(context) && link.getPrefs().getBoolean(UpdateCheck.PREF_AUTO, true)) {
+        // Wtyczka ze sklepu Google Play może przy starcie sprawdzać, czy jest nowsza wersja — tylko
+        // gdy użytkownik to włączy (domyślnie wyłączone: bez zgody wtyczka nie łączy się z internetem).
+        if (UpdateCheck.fromStore(context) && link.getPrefs().getBoolean(UpdateCheck.PREF_AUTO, false)) {
             UpdateCheck.check(context, (newer, failed) -> {
                 if (newer != null)
                     android.widget.Toast.makeText(view.getContext(),

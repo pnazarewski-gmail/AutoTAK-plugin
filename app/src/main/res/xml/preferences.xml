@@ -53,7 +53,7 @@
         android:title="@string/pref_update_check_title" />
 
     <com.atakmap.android.gui.PanCheckBoxPreference
-        android:defaultValue="true"
+        android:defaultValue="false"
         android:key="autotak.check_updates_auto"
         android:summary="@string/pref_update_auto_summary"
         android:title="@string/pref_update_auto_title" />
