@@ -45,4 +45,17 @@
         android:summary="@string/pref_active_map_summary"
         android:title="@string/pref_active_map_title" />
 
+    <PreferenceCategory android:title="@string/pref_category_update" />
+
+    <com.atakmap.android.gui.PanPreference
+        android:key="autotak.check_update"
+        android:summary="@string/pref_update_check_summary"
+        android:title="@string/pref_update_check_title" />
+
+    <com.atakmap.android.gui.PanCheckBoxPreference
+        android:defaultValue="true"
+        android:key="autotak.check_updates_auto"
+        android:summary="@string/pref_update_auto_summary"
+        android:title="@string/pref_update_auto_title" />
+
 </PreferenceScreen>

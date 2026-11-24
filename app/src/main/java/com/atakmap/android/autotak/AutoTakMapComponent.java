@@ -24,6 +24,15 @@ public class AutoTakMapComponent extends DropDownMapComponent {
         super.onCreate(context, intent, view);
         link = new CompanionLink(view);
         link.start();
+        // Wtyczka ze sklepu Google Play: przy starcie sprawdza, czy jest nowsza wersja (da się wyłączyć).
+        if (UpdateCheck.fromStore(context) && link.getPrefs().getBoolean(UpdateCheck.PREF_AUTO, true)) {
+            UpdateCheck.check(context, (newer, failed) -> {
+                if (newer != null)
+                    android.widget.Toast.makeText(view.getContext(),
+                            context.getString(R.string.update_available_toast, newer),
+                            android.widget.Toast.LENGTH_LONG).show();
+            });
+        }
         DocumentedIntentFilter filter = new DocumentedIntentFilter();
         filter.addAction(SHOW_STATUS);
         registerDropDownReceiver(new StatusDropDownReceiver(view, context, link), filter);

@@ -1,5 +1,9 @@
 # Change history / Historia zmian
 
+## 1.5.0
+- When installed from Google Play: a check for a new version (on demand and when ATAK starts) with a shortcut to Google Play. Installed from a file or MDM, the check is off and the plugin makes no internet connection. The panel shows where the plugin was installed from.
+- Przy instalacji z Google Play: sprawdzanie nowej wersji (na żądanie i przy uruchomieniu ATAK) ze skrótem do Google Play. Przy instalacji z pliku lub przez MDM sprawdzanie jest wyłączone, a wtyczka nie łączy się z internetem. Panel pokazuje źródło instalacji.
+
 ## 1.4.4
 - Own position and course are passed to AutoTAK four times a second instead of once, so the AutoTAK map follows turns sooner.
 - Własna pozycja i kierunek są przekazywane do AutoTAK cztery razy na sekundę zamiast raz, dzięki czemu mapa AutoTAK szybciej nadąża za zakrętami.

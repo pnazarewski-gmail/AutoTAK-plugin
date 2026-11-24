@@ -39,6 +39,7 @@ public class StatusDropDownReceiver extends DropDownReceiver implements DropDown
     private final TextView detailsView;
     private final TextView settingsView;
     private final TextView eventsView;
+    private Button storeButton;
     private boolean open;
 
     private final Runnable refresh = new Runnable() {
@@ -60,6 +61,13 @@ public class StatusDropDownReceiver extends DropDownReceiver implements DropDown
         detailsView = rootView.findViewById(R.id.panel_details);
         settingsView = rootView.findViewById(R.id.panel_settings);
         eventsView = rootView.findViewById(R.id.panel_events);
+        storeButton = rootView.findViewById(R.id.panel_open_store);
+        storeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UpdateCheck.openStore(getMapView().getContext(), pluginContext);
+            }
+        });
         ((Button) rootView.findViewById(R.id.panel_events_share)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,6 +149,13 @@ public class StatusDropDownReceiver extends DropDownReceiver implements DropDown
                     host, link.getProtocol(), link.getSentCount())).append('\n');
         }
         details.append(pluginContext.getString(R.string.panel_details_plugin, BuildConfig.VERSION_NAME));
+        // Źródło instalacji decyduje o tym, czy działa sprawdzanie nowej wersji.
+        details.append('\n').append(pluginContext.getString(UpdateCheck.fromStore(pluginContext)
+                ? R.string.panel_install_store : R.string.panel_install_file));
+        String newer = UpdateCheck.available();
+        if (newer != null)
+            details.append('\n').append(pluginContext.getString(R.string.panel_update_available, newer));
+        storeButton.setVisibility(newer != null ? View.VISIBLE : View.GONE);
         detailsView.setText(details);
 
         SharedPreferences prefs = link.getPrefs();
